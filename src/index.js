@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom/client';
+
+//1. import {someNamedImport} from somelocation/somelibrary
+
+
+//2. import someDefaultImport from somelocation/somelibrary 
 import D from './components/D';
 
 // 1. functional component
@@ -35,10 +40,11 @@ class B extends Component{
 // ES6 Fat arrow function
 const C=(props)=>{
   let name = 'Divyansh';
+  let surname2 = 'Thakur'
   console.log('Hi', props.children);
   return(
     <>
-      <span>C {name} {props.children} - <D/></span>
+      <span>C {name} {props.children} - <D surname={surname2}/></span>
     </>
   )
 }

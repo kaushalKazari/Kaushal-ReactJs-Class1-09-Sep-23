@@ -1,11 +1,15 @@
 // 1. import area
+// 1.1 import {someNamedImport} from someLocation/someLibrary
+import {E} from "./E";
 
 
 // 2. functional area
-function D(){
+function D(props){
+    let name='Vinay';
+    let surname2 = 'Kapoor';
     return(
         <>
-            <span>D</span>
+            <span>D {name} {props.surname} - <E surname={surname2}/></span>
         </>
     )
 }
