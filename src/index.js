@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom/client';
+import D from './components/D';
 
 // 1. functional component
 function A(props){
@@ -37,7 +38,7 @@ const C=(props)=>{
   console.log('Hi', props.children);
   return(
     <>
-      <span>C {name} {props.children}</span>
+      <span>C {name} {props.children} - <D/></span>
     </>
   )
 }
