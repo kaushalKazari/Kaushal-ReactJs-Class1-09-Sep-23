@@ -1,17 +1,51 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// 1. functional component
+function A(props){
+  let name ='Kaushal';
+  let surname2 = 'Raj';
+    return(
+      <>
+        <h1>A {name} {props.surname} - <B surname={surname2}/></h1>      
+      </>
+    )
+}
+
+// 2. class component
+class B extends Component{
+  // properties/Variables
+  name='Yash'
+
+
+  // constractor
+
+
+  // methods
+  render(){
+    return(
+      <>
+      <span>B - {this.name} {this.props.surname} - <C>Kumar</C></span>
+      </>
+    )
+  }
+}
+
+// ES6 Fat arrow function
+const C=(props)=>{
+  let name = 'Divyansh';
+  console.log('Hi', props.children);
+  return(
+    <>
+      <span>C {name} {props.children}</span>
+    </>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let sn = 'Kishor'
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <A surname={sn}/>
+  </>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
